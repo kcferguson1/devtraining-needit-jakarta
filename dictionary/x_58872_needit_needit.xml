@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="New Audio" max_length="40" name="u_audio_5" type="audio"/>
+        <element attributes="no_audit=true,no_sort=true" label="New Encrypted Text" mandatory="true" max_length="65536" name="u_glide_encrypted_6" type="glide_encrypted"/>
+        <element label="New HTML" max_length="65536" name="u_html_7" type="html"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="facilities"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="Technology" sequence="3" value="technology"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="Human Resources 1" sequence="0" value="hr1"/>
+                <element label="Human Resources 2" sequence="1" value="hr2"/>
+                <element label="Facilities 1" sequence="2" value="facilities1"/>
+                <element label="Facilities 2" sequence="3" value="facilities2"/>
+                <element label="Legal 1" sequence="4" value="legal1"/>
+                <element label="Legal 2" sequence="5" value="legal2"/>
+                <element label="Technology 1" sequence="6" value="tech1"/>
+                <element label="Technology 2" sequence="7" value="tech2"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+        <element attributes="preview_selector=true,preview_first=true,is_multi_text=true" label="New Wiki" mandatory="true" max_length="65536" name="u_wiki_text_4" type="wiki_text"/>
+    </element>
+</database>
